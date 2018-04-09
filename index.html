@@ -25,7 +25,7 @@
 	<div class="container">
 		<div class="center">
 			<div class="form">
-				<form>
+				<form action="" onsubmit="search()">
 				<select id="type" class="dropdownList">
 					<option id="mvs" value="(mp4|wma|aac|mkv|avi|mov|mpg|wmv)">Movies / Videos</option>
 					<option id="msc" value="(mp3|wav|ac3|ogg|flac|wma|m4a)">Music</option>
@@ -33,8 +33,8 @@
 					<option id="sftwrs" value="(exe|iso|tar|rar|zip|apk)">Software</option>
 					<option id="msc" value="(-1)">Others</option>
 				</select>
-				<input type="text" id="searchTerm" id="txtInput" name="searchterm" class="txtField" />
-				<input type="button" value="search!" id="doSearch" onClick="search()" class="btnSubmit" />
+				<input type="text" id="searchTerm" name="searchterm" class="txtField" />
+				<input type="submit" value="search!" class="btnSubmit" />
 			</form>
 			</div>
 		</div>
