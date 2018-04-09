@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Index Search</title>
-    <link rel="stylesheet" href="styles/style.css">
+	<title>Index Search</title>
+	<link rel="stylesheet" href="styles/style.css">
+	
+	<script>
+		function search()
+		{ // -inurl:(jsp|pl|php|html|aspx|htm|cf|shtml) intitle:index.of “last modified”
+            var searchTerm = document.getElementById("searchTerm").value;
+			var e = document.getElementById("type");
+			var fileType = e.options[e.selectedIndex].value;
+			var search = searchTerm + " " + "+" + fileType + " " + "-inurl:(jsp|pl|php|html|aspx|htm|cf|shtml) intitle:index.of";
+			var address = "https://www.google.com/search?q="+encodeURIComponent(search);
+			window.open(address, '_blank');
+		}
+	</script>
 </head>
 
 <body>
-    <div class="nav">
-        Index Search
-    </div>
+	<div class="nav">
+		Index Search
+	</div>
 
-    <div class="container">
-        <div class="center">
-            <p>tetete</p>
-        </div>
-    </div>
+	<div class="container">
+		<div class="center">
+			<div class="form">
+				<form>
+				<select id="type" class="dropdownList">
+					<option id="mvs" value="(mp4|wma|aac|mkv|avi|mov|mpg|wmv)">Movies / Videos</option>
+					<option id="msc" value="(mp3|wav|ac3|ogg|flac|wma|m4a)">Music</option>
+					<option id="dcmnts" value="(MOBI|CBZ|CBR|CBC|CHM|EPUB|FB2|LIT|LRF|ODT|PDF|PRC|PDB|PML|RB|RTF|TCR|DOC|DOCX|PPT|XLS)">Documents</option>
+					<option id="sftwrs" value="(exe|iso|tar|rar|zip|apk)">Software</option>
+					<option id="msc" value="(-1)">Others</option>
+				</select>
+				<input type="text" id="searchTerm" name="searchterm" class="txtField" />
+				<input type="button" value="search!" onClick="search()" class="btnSubmit" />
+			</form>
+			</div>
+		</div>
+	</div>
 </body>
-
-
 </html>
