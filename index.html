@@ -33,7 +33,7 @@
 					<option id="sftwrs" value="(exe|iso|tar|rar|zip|apk)">Software</option>
 					<option id="msc" value="(-1)">Others</option>
 				</select>
-				<input type="text" id="searchTerm" name="searchterm" class="txtField" onkeydown="if (event.keyCode ==13) {document.getElementByID('btnClick').click()}" />
+				<input type="text" id="searchTerm" name="searchterm" class="txtField" onkeydown="if (event.keyCode == 13) document.getElementByID('btnClick').click()" />
 				<input type="button" value="search!" id="btnClick" onClick="search()" class="btnSubmit" />
 			</form>
 			</div>
