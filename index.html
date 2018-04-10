@@ -3,7 +3,7 @@
 <head>
 	<title>Index Search</title>
 	<link rel="stylesheet" href="styles/style.css">
-	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<script>
 		function search()
 		{
@@ -15,6 +15,7 @@
 			window.open(address, '_blank');
 		}
 	</script>
+	<script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body>
@@ -24,16 +25,20 @@
 
 	<div class="container">
 		<div class="center">
-			<form action="" onsubmit="search()">
-			<select id="type" class="dropdownList">
-				<option id="mvs" value="(mp4|wma|aac|mkv|avi|mov|mpg|wmv)">Movies / Videos</option>
-				<option id="msc" value="(mp3|wav|ac3|ogg|flac|wma|m4a)">Music</option>
-				<option id="dcmnts" value="(MOBI|CBZ|CBR|CBC|CHM|EPUB|FB2|LIT|LRF|ODT|PDF|PRC|PDB|PML|RB|RTF|TCR|DOC|DOCX|PPT|XLS)">Documents</option>
-				<option id="sftwrs" value="(exe|iso|tar|rar|zip|apk)">Software</option>
-				<option id="msc" value="(-1)">Others</option>
-			</select>
-			<input type="text" id="searchTerm" name="searchterm" class="txtField" />
-			<input type="submit" value="search!" class="btnSubmit" />
+			<div class="inpt-grp">
+				<select id="type" class="dropdownList inpt-grp-btn">
+					<option id="mvs" value="(mp4|wma|aac|mkv|avi|mov|mpg|wmv)">Movies / Videos</option>
+					<option id="msc" value="(mp3|wav|ac3|ogg|flac|wma|m4a)">Music</option>
+					<option id="dcmnts" value="(MOBI|CBZ|CBR|CBC|CHM|EPUB|FB2|LIT|LRF|ODT|PDF|PRC|PDB|PML|RB|RTF|TCR|DOC|DOCX|PPT|XLS)">Documents</option>
+					<option id="sftwrs" value="(exe|iso|tar|rar|zip|apk)">Software</option>
+					<option id="msc" value="(-1)">Others</option>
+				</select>
+				<input type="text" id="searchTerm" name="searchterm" class="txtField" />
+				<button onclick="search()" class="btnSubmit"><i class="fa fa-search"></i></button>
+			</div>
+			<div class="socBtns">
+				<a class="github-button" href="https://github.com/indexsearch/indexsearch.github.io/issues" data-icon="octicon-issue-opened" data-size="large" aria-label="Issue indexsearch/indexsearch.github.io on GitHub">Issue</a>
+				<a class="github-button" href="https://github.com/loiSvelasco" data-size="large" aria-label="Follow @loiSvelasco on GitHub">Follow @loiSvelasco</a>
 			</div>
 		</div>
 	</div>

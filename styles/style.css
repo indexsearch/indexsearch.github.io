@@ -11,6 +11,7 @@ body {
 
 form {
     width: 100%;
+    margin: 1%;
 }
 
 .nav {
@@ -31,10 +32,9 @@ form {
 }
 
 .center {
-    background-color: springgreen;
     border-radius: 3px;
     width: 45%;
-    height: 130px;
+    height: 150px;
     text-align: center;
 }
 
@@ -46,10 +46,40 @@ form {
 }
 
 .btnSubmit {
+    border-style: none;
+    border-radius: 0px 5px 5px 0px;
     width: 60px
 }
 
-.btnSubmit, .dropdownList {
+.dropdownList {
     border-style: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.dropdownList:focus, .txtField:focus, .btnSubmit:focus {
+    outline-color: #37474f;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(3,116,116,1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(3,116,116,1);
+    box-shadow: 0px 0px 8px 0px rgba(3,116,116,1);
+}
+
+.btnSubmit, .dropdownList {
     height: 35px;
+}
+
+.inpt-grp {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.inpt-grp-btn {
+    position: relative;
+    white-space: nowrap;
+}
+
+.socBtns {
+    margin: 2%;
 }
