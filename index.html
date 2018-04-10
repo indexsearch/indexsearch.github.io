@@ -7,7 +7,7 @@
 	<script>
 		function search()
 		{
-            var searchTerm = document.getElementById("searchTerm").value;
+			var searchTerm = document.getElementById("searchTerm").value;
 			var e = document.getElementById("type");
 			var fileType = e.options[e.selectedIndex].value;
 			var search = searchTerm + " " + "+" + fileType + " " + "-inurl:(jsp|pl|php|html|aspx|htm|cf|shtml) intitle:index.of";
