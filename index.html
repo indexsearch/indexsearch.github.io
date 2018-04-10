@@ -14,6 +14,15 @@
 			var address = "https://www.google.com/search?q="+encodeURIComponent(search);
 			window.open(address, '_blank');
 		}
+
+		function handle(e)
+		{
+			if(e.keyCode === 13)
+			{
+				e.preventDefault(); // Ensure it is only this code that rusn
+				search();
+			}
+    	}
 	</script>
 	<script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
@@ -33,7 +42,7 @@
 					<option id="sftwrs" value="(exe|iso|tar|rar|zip|apk)">Software</option>
 					<option id="msc" value="(-1)">Others</option>
 				</select>
-				<input type="text" id="searchTerm" name="searchterm" class="txtField" />
+				<input type="text" id="searchTerm" name="searchterm" class="txtField" onkeypress="handle(event)" />
 				<button onclick="search()" class="btnSubmit"><i class="fa fa-search"></i></button>
 			</div>
 			<div class="socBtns">
