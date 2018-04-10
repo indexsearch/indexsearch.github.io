@@ -9,6 +9,10 @@ body {
     color: whitesmoke;
 }
 
+form {
+    width: 100%;
+}
+
 .nav {
     background-color: #37474f;
     position: fixed;
@@ -27,19 +31,26 @@ body {
 }
 
 .center {
-    background-color: #f3f2ef;
+    background-color: springgreen;
     border-radius: 3px;
     width: 45%;
-    height: 130px; 
+    height: 130px;
+    text-align: center;
 }
 
 .txtField {
-    height: 25px;
-    width: 45%;
+    height: 35px;
+    width: 50%;
     border-style: none;
-    padding-left: 8px;
+    padding: 0px 8px 0px 8px;
+}
+
+.btnSubmit {
+    width: 60px
 }
 
 .btnSubmit, .dropdownList {
-    height: 25px;
+    border-style: none;
+    height: 35px;
+    margin: 0px;
 }

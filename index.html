@@ -7,7 +7,7 @@
 	<script>
 		function search()
 		{
-            		var searchTerm = document.getElementById("searchTerm").value;
+            var searchTerm = document.getElementById("searchTerm").value;
 			var e = document.getElementById("type");
 			var fileType = e.options[e.selectedIndex].value;
 			var search = searchTerm + " " + "+" + fileType + " " + "-inurl:(jsp|pl|php|html|aspx|htm|cf|shtml) intitle:index.of";
@@ -24,18 +24,16 @@
 
 	<div class="container">
 		<div class="center">
-			<div class="form">
-				<form action="" onsubmit="search()">
-				<select id="type" class="dropdownList">
-					<option id="mvs" value="(mp4|wma|aac|mkv|avi|mov|mpg|wmv)">Movies / Videos</option>
-					<option id="msc" value="(mp3|wav|ac3|ogg|flac|wma|m4a)">Music</option>
-					<option id="dcmnts" value="(MOBI|CBZ|CBR|CBC|CHM|EPUB|FB2|LIT|LRF|ODT|PDF|PRC|PDB|PML|RB|RTF|TCR|DOC|DOCX|PPT|XLS)">Documents</option>
-					<option id="sftwrs" value="(exe|iso|tar|rar|zip|apk)">Software</option>
-					<option id="msc" value="(-1)">Others</option>
-				</select>
-				<input type="text" id="searchTerm" name="searchterm" class="txtField" />
-				<input type="submit" value="search!" class="btnSubmit" />
-			</form>
+			<form action="" onsubmit="search()">
+			<select id="type" class="dropdownList">
+				<option id="mvs" value="(mp4|wma|aac|mkv|avi|mov|mpg|wmv)">Movies / Videos</option>
+				<option id="msc" value="(mp3|wav|ac3|ogg|flac|wma|m4a)">Music</option>
+				<option id="dcmnts" value="(MOBI|CBZ|CBR|CBC|CHM|EPUB|FB2|LIT|LRF|ODT|PDF|PRC|PDB|PML|RB|RTF|TCR|DOC|DOCX|PPT|XLS)">Documents</option>
+				<option id="sftwrs" value="(exe|iso|tar|rar|zip|apk)">Software</option>
+				<option id="msc" value="(-1)">Others</option>
+			</select>
+			<input type="text" id="searchTerm" name="searchterm" class="txtField" />
+			<input type="submit" value="search!" class="btnSubmit" />
 			</div>
 		</div>
 	</div>
