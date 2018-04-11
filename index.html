@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Index Search</title>
+	<link rel='icon' href='favicon.ico' type='image/x-icon' />
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<script>
@@ -10,8 +11,8 @@
 			var searchTerm = document.getElementById("searchTerm").value;
 			var e = document.getElementById("type");
 			var fileType = e.options[e.selectedIndex].value;
-			var search = searchTerm + " " + "+" + fileType + " " + "-inurl:(jsp|pl|php|html|aspx|htm|cf|shtml) intitle:index.of";
-			var address = "https://www.google.com/search?q="+encodeURIComponent(search);
+			var search = searchTerm + " +(" + fileType + ") -inurl:(jsp|pl|php|html|aspx|htm|cf|shtml) intitle:index.of";
+			var address = "https://www.google.com/search?q=" + encodeURIComponent(search);
 			window.open(address, '_blank');
 		}
 
@@ -19,7 +20,7 @@
 		{
 			if(e.keyCode === 13)
 			{
-				e.preventDefault(); // Ensure it is only this code that rusn
+				e.preventDefault();
 				search();
 			}
     	}
@@ -36,11 +37,11 @@
 		<div class="center">
 			<div class="inpt-grp">
 				<select id="type" class="dropdownList inpt-grp-btn">
-					<option id="mvs" value="(mp4|wma|aac|mkv|avi|mov|mpg|wmv)">Movies / Videos</option>
-					<option id="msc" value="(mp3|wav|ac3|ogg|flac|wma|m4a)">Music</option>
-					<option id="dcmnts" value="(MOBI|CBZ|CBR|CBC|CHM|EPUB|FB2|LIT|LRF|ODT|PDF|PRC|PDB|PML|RB|RTF|TCR|DOC|DOCX|PPT|XLS)">Documents</option>
-					<option id="sftwrs" value="(exe|iso|tar|rar|zip|apk)">Software</option>
-					<option id="msc" value="(-1)">Others</option>
+					<option id="mvs" value="mp4|wma|aac|mkv|avi|mov|mpg|wmv">Movies / Videos</option>
+					<option id="msc" value="mp3|wav|ac3|ogg|flac|wma|m4a">Music</option>
+					<option id="dcmnts" value="MOBI|CBZ|CBR|CBC|CHM|EPUB|FB2|LIT|LRF|ODT|PDF|PRC|PDB|PML|RB|RTF|TCR|DOC|DOCX|PPT|XLS">Documents</option>
+					<option id="sftwrs" value="exe|iso|tar|rar|zip|apk">Software</option>
+					<option id="msc" value="-1">Others</option>
 				</select>
 				<input type="text" id="searchTerm" name="searchterm" class="txtField" onkeypress="handle(event)" />
 				<button onclick="search()" class="btnSubmit"><i class="fa fa-search"></i></button>
@@ -55,8 +56,8 @@
 <!--
     __      _ _____           __
    / /___  (_) ___/   _____  / /___ _______________ 
-  / / __ \/ /\__ \ | / / _ \/ / __ `/ ___/ ___/ __ \
- / / /_/ / /___/ / |/ /  __/ / /_/ (__  ) /__/ /_/ /
+  / / __ \/ /\__ \ | / / _ \/ / __ `/ ___/ ___/ __ \ https://indexsearch.github.io/
+ / / /_/ / /___/ / |/ /  __/ / /_/ (__  ) /__/ /_/ / A barebones googledork based searcher
 /_/\____/_//____/|___/\___/_/\__,_/____/\___/\____/  © 2018                                             
 -->
 </html>
